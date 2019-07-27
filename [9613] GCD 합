@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Num_9613 {
+
+	private static int gcd(int x, int y) {
+		return y == 0? x : gcd(y, x%y);
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner input2 = new Scanner(System.in);
+		int t = input2.nextInt();
+		
+		for(int i = 0; i < t; i++) {
+			int n = input2.nextInt();
+			
+			int [] num = new int[n];
+			for(int j = 0; j < n; j++)
+				num [j] = input2.nextInt();
+			
+			int sum = 0;
+			for(int i1 = 0; i1 < n-1; i1++) {
+				for(int j = i1+1; j < n; j++) {
+					sum += gcd(num[i1], num[j]);
+				}	
+			}
+			System.out.println(sum);
+		}
+
+	}
+}
