@@ -11,12 +11,13 @@ public class Num_11005 {
 		int b = input1.nextInt(); //바꿀 진수 입력
 		int k = n/b;
 		
-		while(k < b) {
+		while(k == 0) {
 			int r = n%b;
 			n = n/b;
-			
 			stack.push(r);
 			System.out.print(stack.pop());
+			if(k<b)
+				System.out.print(k);
 		}
 	}
 
