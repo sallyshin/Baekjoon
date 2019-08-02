@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Num_2745 {
+	
+	public static int change(String n, int b) {
+		char[] ch = n.toCharArray();
+		int size = ch.length;
+		
+		int result = 0;
+		
+		for(int i = 0; i < size; i++) {
+			if(ch[i] >=0 && ch[i] < 10) {
+				int M = (int)Math.pow(b, size-i-1);
+				result += ch[i]*M;
+			}
+			else {
+				int M = (int)Math.pow(b, size-i-1);
+				result += (ch[i]-'A'+10)*M;
+			}
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		String n = input.next();
+		int b = input.nextInt();
+				
+		System.out.print(change(n,b));
+		
+	}
+
+}
