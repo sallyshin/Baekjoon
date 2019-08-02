@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Num_1373 {
+	public static int trans(String a) {
+		char[] ch = a.toCharArray();
+		int k = ch.length;
+
+		int result = 0;
+		for(int i = 0; i < k; i++) {
+			int m = (int)Math.pow(2, k-1-i);
+			result += ch[i]*m;
+		}
+		return result;
+		
+	}
+	
+	public static String trans2(int a) {
+		String result = "";
+		while(a > 0) {
+			int temp = a%8;
+			result = result + (char)temp;
+			a /= 8;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		Scanner input2 = new Scanner(System.in);
+		String two = input2.next();
+		
+		System.out.print(trans2(trans(two)));
+	}
+}
