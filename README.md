@@ -1,1 +1,1 @@
-# Baekjoon-Part.4
+# 백준 알고리즘 Part.4
