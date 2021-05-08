@@ -40,7 +40,6 @@ class Num_10828 {
                     System.out.println(stack.peek());
                 }
             }
-
         }
     }
 }
